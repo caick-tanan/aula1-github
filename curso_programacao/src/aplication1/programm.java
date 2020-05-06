@@ -9,6 +9,8 @@ public class programm {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		Product product;
+		
+		System.out.println("Bom dia");
 			
 		System.out.println("Enter account number: ");
 		int number = sc.nextInt();
