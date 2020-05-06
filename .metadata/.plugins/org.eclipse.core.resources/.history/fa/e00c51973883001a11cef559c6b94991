@@ -1,0 +1,39 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+
+		Scanner Sc = new Scanner(System.in);
+		
+		
+		
+		double a = Sc.nextDouble();
+		double b = Sc.nextDouble();
+		double c = Sc.nextDouble();
+		
+		double triangulo = (a * c) / 2.0;
+		double circulo = c * c * 3.14;
+		double trapezio = (a + b ) / 2.0 * c;
+		double quadrado = b * b;
+		double retangulo = a * b;
+		
+		System.out.println(triangulo);
+		System.out.println(circulo);
+		System.out.println(trapezio);
+		System.out.println(quadrado);
+		System.out.println(retangulo);
+		
+		
+		
+		
+		
+		Sc.close();
+		
+
+	}
+
+}

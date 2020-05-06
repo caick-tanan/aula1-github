@@ -1,0 +1,32 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+
+		Scanner Sc = new Scanner(System.in);
+		
+		
+		System.out.println("Digite um número: ");
+		int x = Sc.nextInt();
+		 
+		while (x != 0) {
+			System.out.println("Digite um número: ");
+			x = Sc.nextInt();
+			
+		}
+		
+		
+		
+		
+		
+		
+		Sc.close();
+		
+
+	}
+
+}

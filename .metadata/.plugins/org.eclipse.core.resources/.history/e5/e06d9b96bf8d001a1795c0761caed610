@@ -1,0 +1,81 @@
+package espelhamento4;
+
+import outro1.Hash_Lista.hash;
+
+public class Hash_Lista {
+	
+	static int tam=10;
+	static hash tabela[] = new hash[tam];
+	
+	public static class hash{
+		String chave;
+		hash prox;
+		
+	}
+	
+	public static void inserir(String nome) {
+		int pos = hash(nome.toUpperCase());
+		hash novo = new hash();
+		novo.chave = nome;
+		novo.prox = tabela[pos];
+		tabela[pos] = novo;
+
+	}
+	
+	static int hash (String conteudo) {
+		return (int) conteudo.charAt(0) -65;
+	}
+	
+	static int umHash(int n) {
+		return n + 65;
+	}
+	
+	static void mostrar_hash() {
+		hash aux;
+		for (int i = 0 ; i < tam ; i++) {
+			aux = tabela[i];
+			while (aux != null) {
+				System.out.println("Entrada" + (char) + umHash(i) + ": " + aux.chave);
+				aux = aux.prox;
+			}
+		}
+	}
+	
+	 static void mostrarHash(char inicial) {
+	        hash aux;
+	        int i = hash(Character.toString(inicial));
+	        aux = tabela[i];
+	        while (aux != null) {
+	            if (aux.chave != null && Character.compare(aux.chave.charAt(0), inicial) == 0) {
+	                System.out.println("\nEntrada " + (char) umHash(i) + ": " + aux.chave);
+	            }
+	            aux = aux.prox;
+	        }
+	    }
+	 
+		static void excluir_hash(String nome) {
+			int pos = hash(nome.toUpperCase());
+			hash aux;
+			
+			if (tabela[pos] != null) {
+				if (tabela[pos].chave == nome)
+				tabela[pos] = tabela[pos].prox;
+				else {
+					aux = tabela[pos].prox;
+					hash ant = tabela [pos];
+					while (aux != null && aux.chave.equals(nome));
+					{
+						ant = aux;
+						aux = aux.prox;
+					}
+					if (aux != null)
+						ant.prox = aux.prox;
+					else System.out.println("Numero não encontrado");
+			}
+				
+		}
+		else System.out.println("Numero não encontrado");
+		}
+		
+
+}

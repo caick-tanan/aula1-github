@@ -1,0 +1,34 @@
+package espelhamento4;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner (System.in);
+		int opcao = 0;
+		String nome = "";
+	}
+
+	while (opcao != 6) {
+        switch (opcao) {
+		case 1:
+			System.out.println("\nQual o nome? ");
+			nome = in.next();
+			Hash_Lista.inserir(nome);
+			opcao = 0;
+			break;
+		case 2:
+			mostrar_hash();
+			break;
+		case 3:
+			System.out.println("Digite um numero:");
+			num = entrada.nextInt();
+			excluir_hash(num);
+			break;
+        }
+	}
+	
+	
+}

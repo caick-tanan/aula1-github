@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+public class program3 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		List<String> list = new ArrayList<>();
+				
+		list.add(sc.nextLine());
+		list.add(sc.nextLine());
+		list.add(sc.nextLine());
+		list.add(2, "caick");
+		
+		
+		System.out.println(list.size()); //contagem do tamanho da list
+		
+		list.removeIf(x -> x.charAt(0) == 'm'); // condição para remover item específico (caso não encontre, retorna o valor -1)
+		
+		for (String x : list) {
+			System.out.println(x);
+		}
+	
+		System.out.println("Index caick: " + list.indexOf("caick")); //encontra em que posição da lista está o nome "caick"
+		
+		
+		List<String> result = list.stream().filter(x -> x.charAt(0) == 'a').collect(Collectors.toList());//encontra todos os valores começado com a letra 'a'
+		for (String x : result) {
+			System.out.println(x);
+		}
+		
+		
+		String name = list.stream().filter(x -> x.charAt(0) == 'a').findFirst().orElse(null); //encontra o primeiro valor começado com a letra 'a'
+		System.out.println(name);
+		
+		
+	}
+	
+
+}

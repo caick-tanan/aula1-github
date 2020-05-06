@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+public class program3 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		List<Integer> list = new ArrayList<>();
+		List<String> list1 = new ArrayList<>();
+		List<Double> list2 = new ArrayList<>();
+				
+		System.out.println("Digite seu ID: ");
+		list.add(sc.nextInt());
+		System.out.println("Digite seu nome: ");
+		sc.nextLine();
+		list1.add(sc.nextLine());
+		System.out.println("Digite seu salário: ");
+		list2.add(sc.nextDouble());
+			
+		for (String x : list1) {
+			System.out.println(x);
+		}
+	
+		
+	}
+	
+
+}

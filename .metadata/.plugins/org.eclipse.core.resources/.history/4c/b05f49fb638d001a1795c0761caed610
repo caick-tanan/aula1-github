@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Hash_Aberto1 {
+	public static class hash{
+		int chave;
+		char livre;
+		
+	}
+	
+	static int tam=8;
+	static hash tabela[] = new hash[tam];
+	static Scanner entrada = new Scanner (System.in);
+	
+	public static void inserir(int pos, int n) {
+		int i =0;
+		while (i<tam)
+	}
+}
